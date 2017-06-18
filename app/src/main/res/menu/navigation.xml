@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group android:checkableBehavior="single">
+
+    <item
+      android:id="@+id/navigation_item_statistics"
+      android:icon="@mipmap/ic_nav_statistics"
+      android:title="@string/navigation_item.statistics"/>
+    <!--<item-->
+      <!--android:id="@+id/navigation_item_friends"-->
+      <!--android:icon="@mipmap/ic_nav_friend"-->
+      <!--android:title="@string/navigation_item.friends"/>-->
+    <!--<item-->
+      <!--android:id="@+id/navigation_item_communications"-->
+      <!--android:icon="@mipmap/ic_nav_communication"-->
+      <!--android:title="@string/navigation_item.communications"/>-->
+    <!--<item-->
+      <!--android:id="@+id/navigation_item_groups"-->
+      <!--android:icon="@mipmap/"-->
+      <!--android:title="@string/navigation_item.groups"/>-->
+    <!--<item-->
+      <!--android:id="@+id/navigation_item_search"-->
+      <!--android:icon="@mipmap/ic_nav_search"-->
+      <!--android:title="@string/navigation_item.search"/>-->
+    <item
+      android:id="@+id/navigation_item_arduino"
+      android:icon="@mipmap/ic_nav_arduino"
+      android:title="@string/navigation_item.arduino"/>
+  </group>
+
+</menu>

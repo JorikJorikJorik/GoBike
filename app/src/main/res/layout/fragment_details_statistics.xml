@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  >
+
+  <data>
+    <variable
+      name="details_statistics"
+      type="com.jorik.gobike.ViewModel.DetailsStatisticsViewModel"/>
+  </data>
+
+  <ScrollView
+    android:id="@+id/scrollViewDetailsStatistics"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+      android:id="@+id/constraintLayoutDetailsStatistics"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <android.support.v7.widget.CardView
+        android:id="@+id/cardViewTotalWeekStatistics"
+        style="@style/WhiteCardView"
+        android:layout_width="@dimen/details_statistics.card_view.total_week_statistics.width"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewWeekStatistics"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+          android:id="@+id/constraintLayoutTotalWeekStatistics"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <TextView
+            android:id="@+id/textViewTotalWeekStatistics"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/details_statistics.tex_view.total_week_statistics.margin.bottom"
+            android:text="@string/details_statistics.text_view.total_week_statistics.text"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerViewTotalWeekStatistics"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+          <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewTotalWeekStatistics"
+            android:layout_width="@dimen/details_statistics.recycler_view.total_week_statistics.width"
+            android:layout_height="wrap_content"
+            app:adapter='@{details_statistics.totalAdapter}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalWeekStatistics"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+      </android.support.v7.widget.CardView>
+
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewWeekStatistics"
+        android:layout_width="@dimen/details_statistics.recycler_view.week_statistics.width"
+        android:layout_height="wrap_content"
+        app:adapter='@{details_statistics.graphAdapter}'
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewTotalWeekStatistics"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+
+  </ScrollView>
+
+</layout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/constrainLayoutHeader"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingTop="@dimen/header.constraint_layout.header.padding.top"
+  android:background="@color/header.constraint_layout.header.background">
+
+  <ImageView
+    android:id="@+id/imageViewProfile"
+    android:layout_width="@dimen/header.image_view.profile.view_size"
+    android:layout_height="@dimen/header.image_view.profile.view_size"
+    android:layout_margin="@dimen/header.image_view.profile.margin"
+    android:src="@mipmap/ic_dafault_icon"
+    app:layout_constraintBottom_toTopOf="@+id/textViewFullName"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_chainStyle="spread"/>
+
+  <TextView
+    android:id="@+id/textViewFullName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/header.text_view.full_name.margin.bottom"
+    android:layout_marginLeft="@dimen/header.text_view.full_name.margin.left"
+    android:textAllCaps="false"
+    android:textColor="@color/header.text_view.full_name.text"
+    android:textSize="@dimen/header.text_view.full_name.margin.size"
+    app:layout_constraintBottom_toTopOf="@+id/textViewLastActiveTime"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imageViewProfile"/>
+
+  <TextView
+    android:id="@+id/textViewLastActiveTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/header.text_view.last_active_time.margin.bottom"
+    android:layout_marginLeft="@dimen/header.text_view.last_active_time.margin.left"
+    android:textAllCaps="false"
+    android:textColor="@color/header.text_view.last_active_time.text"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textViewFullName"/>
+
+  <ImageView
+    android:id="@+id/imageViewExit"
+    android:layout_width="@dimen/header.image_view.exit.view_size"
+    android:layout_height="@dimen/header.image_view.exit.view_size"
+    android:padding="@dimen/header.image_view.exit.padding"
+    android:layout_marginTop="@dimen/header.image_view.exit.margin.top"
+    android:layout_marginBottom="@dimen/header.image_view.exit.margin.bottom"
+    android:layout_marginEnd="@dimen/header.image_view.exit.margin.end"
+    android:layout_marginLeft="@dimen/header.image_view.exit.margin.left"
+    android:layout_marginRight="@dimen/header.image_view.exit.margin.right"
+    android:src="@mipmap/ic_exit_white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintLeft_toRightOf="@+id/imageViewProfile"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0"/>
+
+
+</android.support.constraint.ConstraintLayout>

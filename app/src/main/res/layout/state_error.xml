@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+    <import type="com.jorik.gobike.R"/>
+    <import type="android.view.View"/>
+    <variable
+      name="visible"
+      type="boolean"/>
+    <variable
+      name="swipeState"
+      type="boolean"/>
+    <variable
+      name="pressed"
+      type="boolean"/>
+    <variable
+      name="errorModel"
+      type="com.jorik.gobike.Model.POJO.ErrorViewModel"/>
+  </data>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/constraintLayoutStateError"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/default_wallpaper"
+    app:action_pressed='@{errorModel.action}'
+    app:pressed_listener='@={pressed}'
+    android:visibility='@{visible ? View.VISIBLE : View.GONE}'>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/swipeRefreshLayoutError"
+      android:layout_width="@dimen/state_error.swipe_refresh_layout.error.view_size"
+      android:layout_height="@dimen/state_error.swipe_refresh_layout.error.view_size"
+      android:layout_marginStart="@dimen/state_error.swipe_refresh_layout.error.margin.start"
+      android:layout_marginEnd="@dimen/state_error.swipe_refresh_layout.error.margin.end"
+      android:layout_marginLeft="@dimen/state_error.swipe_refresh_layout.error.margin.left"
+      android:layout_marginRight="@dimen/state_error.swipe_refresh_layout.error.margin.right"
+      app:action_swipe='@{errorModel.action}'
+      app:enable='@{!errorModel.refresh}'
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:state='@{swipeState}'>
+
+      <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutErrorBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+          android:id="@+id/imageViewErrorIcon"
+          android:layout_width="@dimen/state_error.image_view.error_icon.view_size"
+          android:layout_height="@dimen/state_error.image_view.error_icon.view_size"
+          android:layout_marginBottom="@dimen/state_error.image_view.error_icon.margin.bottom"
+          app:layout_constraintBottom_toTopOf="@+id/textViewErrorMessage"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_chainStyle="packed"
+          app:pressed='@{pressed}'
+          app:resource_pressed='@{errorModel.iconResource}'
+          />
+
+        <TextView
+          android:id="@+id/textViewErrorMessage"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/state_error.text_view.error_message.margin.bottom"
+          android:gravity="center"
+          android:text='@{errorModel.textError}'
+          app:layout_constraintBottom_toTopOf="@+id/constraintLayoutRefreshBox"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/imageViewErrorIcon"
+          app:pressed='@{pressed}'/>
+
+        <android.support.constraint.ConstraintLayout
+          android:id="@+id/constraintLayoutRefreshBox"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textViewErrorMessage"
+          app:second_visible_value='@{View.INVISIBLE}'
+          app:state_visibility='@{errorModel.refresh}'>
+
+          <ImageView
+            android:id="@+id/imageViewRefreshIcon"
+            android:layout_width="@dimen/state_error.image_view.refresh_icon.view_size"
+            android:layout_height="@dimen/state_error.image_view.refresh_icon.view_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/textViewRefreshMessage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pressed='@{pressed}'
+            app:resource_pressed='@{R.mipmap.ic_error_refresh}'/>
+
+          <TextView
+            android:id="@+id/textViewRefreshMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/state_error.text_view.refresh_message.margin.start"
+            android:layout_marginLeft="@dimen/state_error.text_view.refresh_message.margin.left"
+            android:gravity="center"
+            android:text="@string/state_layout.error.refresh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imageViewRefreshIcon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pressed='@{pressed}'/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+      </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+  </android.support.constraint.ConstraintLayout>
+</layout>

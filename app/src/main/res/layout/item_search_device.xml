@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+    <variable
+      name="bluetooth_device"
+      type="android.bluetooth.BluetoothDevice"/>
+
+  </data>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/constrainLayoutSearchDevice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/item_search_device.constraint_layout.search_device.margin">
+
+    <TextView
+      android:id="@+id/textViewDeviceName"
+      android:textStyle="bold"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/item_search_device.text_view.name.margin.bottom"
+      android:text='@{bluetooth_device.name}'
+      android:textColor="@color/item_search_device.text_view.name.text"
+      android:textSize="@dimen/item_search_device.text_view.name.size"
+      app:layout_constraintBottom_toTopOf="@+id/textViewDeviceMac"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+      android:id="@+id/textViewDeviceMac"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text='@{bluetooth_device.address}'
+      android:textSize="@dimen/item_search_device.text_view.mac.size"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textViewDeviceName"/>
+
+  </android.support.constraint.ConstraintLayout>
+</layout>

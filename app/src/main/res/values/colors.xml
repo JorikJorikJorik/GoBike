@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- layout.view.id_name.field -->
+
+  <!-- main -->
+
+  <color name="blue.light4">#89e8f9</color>
+  <color name="blue.light3">#17bbd7</color>
+  <color name="blue.light2">#45c6dc</color>
+  <color name="blue.light">#18bfdc</color>
+  <color name="blue.main">#17a7c0</color>
+  <color name="blue.dark">#128091</color>
+  <color name="blue.dark1">#16a1b9</color>
+
+  <color name="green.light">#8ed645</color>
+  <color name="green.main">#76b13a</color>
+  <color name="green.dark">#517e22</color>
+
+  <color name="red.light">#fd303d</color>
+  <color name="red.main">#da1b27</color>
+  <color name="red.dark">#c21822</color>
+
+  <color name="white">#f2f2f2</color>
+  <color name="white.dark">#cfcfcf</color>
+  <color name="white.dark1">#e7e7e7</color>
+  <color name="black">#1a1a1a</color>
+
+  <color name="gray.light2">#969696</color>
+  <color name="gray.light">#a7a7a7</color>
+  <color name="gray.main">#848484</color>
+  <color name="gray.dark">#5f5f5f</color>
+  <color name="gray.alpha">#28a7a7a7</color>
+
+  <!-- basic -->
+
+  <color name="primary">@color/blue.main</color>
+  <color name="primary.dark">@color/blue.dark</color>
+  <color name="primary.light">@color/blue.light</color>
+  <color name="accent">@color/white</color>
+  <color name="text.primary">@color/black</color>
+  <color name="text.secondary">@color/gray.dark</color>
+  <color name="text.divider">@color/gray.light</color>
+
+  <!-- error -->
+
+  <color name="error.pressed">@color/blue.dark1</color>
+  <color name="error.unpressed">@color/blue.light</color>
+
+  <!-- dialog error -->
+
+  <color name="dialog_error.text_view.title.text">@color/black</color>
+  <color name="dialog_error.button.ok.text">@color/blue.main</color>
+
+  <!-- style white text input layout -->
+
+  <color name="style.white_text_input_layout.control.normal">@color/white</color>
+  <color name="style.white_text_input_layout.control.activated">@color/white</color>
+  <color name="style.white_text_input_layout.control.highlight">@color/white</color>
+  <color name="style.white_text_input_layout.hint">@color/gray.light</color>
+  <color name="style.white_text_input_layout.text">@color/white</color>
+
+  <!-- style blue text input layout -->
+
+  <color name="style.blue_text_input_layout.control.normal">@color/gray.main</color>
+  <color name="style.blue_text_input_layout.control.activated">@color/blue.main</color>
+  <color name="style.blue_text_input_layout.control.highlight">@color/blue.main</color>
+  <color name="style.blue_text_input_layout.hint">@color/gray.light</color>
+  <color name="style.blue_text_input_layout.text">@color/black</color>
+
+  <!-- style password -->
+
+  <color name="style.password.text">@color/white</color>
+
+  <!-- style blue button -->
+
+  <color name="style.blue_button.text">@color/white</color>
+
+  <!-- style blue progress bar -->
+
+  <color name="style.blue_progress_bar.accent">@color/blue.main</color>
+
+  <!-- sign up -->
+
+  <color name="sign_up.text_input_layout.password.toggle_tint">@color/gray.light</color>
+  <color name="sign_up.text_input_layout.confirm_password.toggle_tint">@color/gray.light</color>
+
+  <!-- login -->
+
+  <color name="login.constraint_layout.login_in.background">@color/blue.main</color>
+  <color name="login.text_input_edit_text.login_in.text">@color/white</color>
+  <color name="login.text_input_edit_text.password.text">@color/white</color>
+  <color name="login.text_input_layout.password.toggle_tint">@color/gray.light</color>
+
+  <!-- white button press selector -->
+
+  <color name="white_button_press_selector.press">@color/white.dark</color>
+
+  <!-- splash screen -->
+
+  <color name="splash_screen.background">@color/blue.main</color>
+
+  <!-- blue main button selector -->
+
+  <color name="blue_main_button_selector.focus">@color/blue.main</color>
+  <color name="blue_main_button_selector.enable">@color/blue.light4</color>
+
+  <!-- blue main button ripple -->
+
+  <color name="blue_main_button_ripple">@color/blue.light3</color>
+
+  <!-- blue main button press selector -->
+
+  <color name="blue_main_button_press_selector.focus">@color/blue.dark</color>
+
+  <!-- blue light button selector -->
+
+  <color name="blue_light_button_selector.focus">@color/blue.light</color>
+  <color name="blue_light_button_selector.enable">@color/blue.light4</color>
+
+  <!-- blue light button ripple -->
+
+  <color name="blue_light_button_ripple">@color/blue.main</color>
+
+  <!-- blue light button press selector -->
+
+  <color name="blue_light_button_press_selector.focus">@color/blue.dark1</color>
+
+  <!-- header -->
+
+  <color name="header.text_view.full_name.text">@color/white</color>
+  <color name="header.text_view.last_active_time.text">@color/white.dark</color>
+  <color name="header.constraint_layout.header.background">@color/white</color>
+
+  <!-- main activity -->
+
+  <color name="main_activity.frame_layout.main.background">@color/white</color>
+
+  <!-- navigation item selector -->
+
+  <color name="navigation_item_selector.unchecked">@color/gray.light2</color>
+  <color name="navigation_item_selector.checked">@color/blue.main</color>
+
+  <!-- navigation item background selector -->
+
+  <color name="navigation_item_background_selector.checked">@color/gray.alpha</color>
+
+  <!-- style popup overlay -->
+
+  <color name="style.popup_overlay.background">@color/primary</color>
+  <color name="style.popup_overlay.text_color_primary">@color/white</color>
+  <color name="style.popup_overlay.text_color_secondary">@color/white</color>
+  <color name="style.popup_overlay.action_menu_text_color">@color/white</color>
+
+  <!-- item total statistics -->
+
+  <color name="item_total_statistics.text_view.value.text">@color/green.dark</color>
+  <color name="item_total_statistics.text_view.index.text">@color/green.dark</color>
+
+  <!-- item period statistics -->
+
+  <color name="item_period_statistics.text_view.name_date">@color/green.dark</color>
+
+  <!-- item spinner choose -->
+
+  <color name="item_spinner_choose.text_view.choose.text">@color/white</color>
+  <color name="item_spinner_choose.text_view.choose.background">@color/blue.main</color>
+
+  <!-- item spinner drop down -->
+
+  <color name="item_spinner_drop_down.text_view.drop_down.text">@color/black</color>
+  <color name="item_spinner_drop_down.text_view.drop_down.background">@color/white.dark1</color>
+
+  <!-- style title text view -->
+
+  <color name="style.title_text_view.text_color">@color/blue.main</color>
+
+  <!-- style white card view -->
+
+  <color name="style.white_card_view.card_background_color">@color/white</color>
+
+  <!-- style white card view -->
+
+  <color name="swipe_refresh_layout.scheme_colors">@color/blue.main</color>
+
+  <!-- style white card view -->
+
+  <color name="style_progress.indeterminate_drawable.color">@color/blue.main</color>
+
+  <!-- palette utils -->
+
+  <color name="palette_utils.default_color">@color/blue.main</color>
+
+  <!-- load view utils -->
+
+  <color name="load_view_utils.progress_color">@color/white</color>
+
+  <!-- style blue tab layout -->
+
+  <color name="style.blue_tab_layout.tab_indicator_color">@color/white</color>
+  <color name="style.blue_tab_layout.tab_text_color">@color/white.dark</color>
+  <color name="style.blue_tab_layout.tab_selected_text_color">@color/white</color>
+
+  <!-- arduino -->
+
+  <color name="arduino.floating_action_button.search_device.backgrount_tint">@color/blue.main</color>
+  <color name="arduino.floating_action_button.search_device.ripple_color">@color/blue.dark</color>
+
+  <!-- item arduino -->
+
+  <color name="item_arduino.text_view.name.text">@color/black</color>
+
+  <!-- item search device -->
+
+  <color name="item_search_device.text_view.name.text">@color/black</color>
+
+</resources>

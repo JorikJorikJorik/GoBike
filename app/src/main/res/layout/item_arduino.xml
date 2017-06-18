@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+
+    <variable
+      name="arduino_item"
+      type="com.jorik.gobike.Network.DTO.ArduinoDTO"/>
+
+  </data>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/constrainLayoutArduinoItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/item_arduino.constraint_layout.item.margin.top"
+    android:layout_marginBottom="@dimen/item_arduino.constraint_layout.item.margin.bottom"
+    android:layout_marginLeft="@dimen/item_arduino.constraint_layout.item.margin.left"
+    android:layout_marginRight="@dimen/item_arduino.constraint_layout.item.margin.right">
+
+    <TextView
+      android:id="@+id/textViewArduinoName"
+      android:textStyle="bold"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/item_arduino.text_view.name.margin.bottom"
+      android:layout_marginRight="@dimen/item_arduino.text_view.name.margin.right"
+      android:text='@{arduino_item.name}'
+      android:textColor="@color/item_arduino.text_view.name.text"
+      android:textSize="@dimen/item_arduino.text_view.name.size"
+      app:layout_constraintBottom_toTopOf="@+id/textViewDeviceMac"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@+id/imageViewArduinoDelete"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+      android:id="@+id/textViewArduinoMac"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="@dimen/item_arduino.text_view.mac.margin.right"
+      android:text='@{arduino_item.mac}'
+      android:textSize="@dimen/item_arduino.text_view.mac.size"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@+id/imageViewArduinoDelete"
+      app:layout_constraintTop_toBottomOf="@+id/textViewDeviceName"/>
+
+    <ImageView
+      android:id="@+id/imageViewArduinoDelete"
+      android:layout_width="@dimen/item_arduino.image_view.delete.view_size"
+      android:layout_height="@dimen/item_arduino.image_view.delete.view_size"
+      android:padding="@dimen/item_arduino.image_view.delete.padding"
+      android:src="@mipmap/ic_arduino_delete"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+</layout>

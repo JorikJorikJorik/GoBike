@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_pressed="true">
+    <shape android:shape="rectangle">
+      <corners android:radius="@dimen/white_button_press_selector.press.radius"/>
+      <stroke android:color="@color/white_button_press_selector.press"/>
+    </shape>
+  </item>
+  <item android:drawable="@drawable/white_button_selector"/>
+</selector>

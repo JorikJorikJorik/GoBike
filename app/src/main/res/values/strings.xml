@@ -1,0 +1,198 @@
+<resources>
+
+  <!-- basic string -->
+
+  <string name="app_name">Поехали!</string>
+  <string name="empty_string"/>
+
+  <!-- label -->
+
+  <string name="label.signup">Sign Up</string>
+  <string name="label.details_statistics">Details statistics</string>
+  <string name="label.search_device">Search arduino</string>
+
+  <!-- error response string -->
+
+  <string name="error_response.bad_request">The request was invalid. Please contact with support.</string>
+  <string name="error_response.unauthorized">Missing or incorrect authentication credentials. Please re-login.</string>
+  <string name="error_response.forbidden">The request has been refused or access is not allowed. Please contact with support.</string>
+  <string name="error_response.not_found">The request resource not found. Please contact with support.</string>
+  <string name="error_response.not_acceptable">Invalid format is specified in the request. Please contact with support.</string>
+  <string name="error_response.gone">This resource is gone. Please contact with support.</string>
+  <string name="error_response.enhance_your_calm">Achieved rate limited.</string>
+  <string name="error_response.too_many_requests">Too many requests. Please contact with support.</string>
+  <string name="error_response.internal_server_error">The server error occurred. Please contact with support or try again later.</string>
+  <string name="error_response.bad_gateway">The server was down or updated. Please try again later.</string>
+  <string name="error_response.service_unavailable">The server was overloaded with request. Please try again later.</string>
+  <string name="error_response.gateway_timeout">The request could not be serviced due to some service failure. Please try again later.</string>
+  <string name="error_response.json_error">A JSON error occurred. Please contact with support.</string>
+  <string name="error_response.hostname_error">An error has occurred with connect hostname. Check the connection and try again.</string>
+  <string name="error_response.timeout_error">The timeout period has expired. Check the connection and try again.</string>
+  <string name="error_response.connect_error">Failed the Internet connection. Check the connection and try again.</string>
+  <string name="error_response.network_error">Failed the Internet connection. Check the connection and try again.</string>
+  <string name="error_response.unknown_error">An unknown error occurred. Please contact with support. \nLog: </string>
+
+  <!-- error short string -->
+
+  <string name="error_short_response.bad_request">Request invalid</string>
+  <string name="error_short_response.unauthorized">Incorrect authentication</string>
+  <string name="error_short_response.forbidden">Access not allowed</string>
+  <string name="error_short_response.not_found">Resource not found</string>
+  <string name="error_short_response.not_acceptable">Invalid format</string>
+  <string name="error_short_response.gone">Resource gone</string>
+  <string name="error_short_response.enhance_your_calm">Achieved rate limited.</string>
+  <string name="error_short_response.too_many_requests">Too many requests</string>
+  <string name="error_short_response.internal_server_error">Server failure</string>
+  <string name="error_short_response.bad_gateway">Server updated</string>
+  <string name="error_short_response.service_unavailable">Server overloaded</string>
+  <string name="error_short_response.gateway_timeout">Service failure</string>
+  <string name="error_short_response.json_error">JSON failure</string>
+  <string name="error_short_response.hostname_error">Hostname failure</string>
+  <string name="error_short_response.timeout_error">Timeout expired</string>
+  <string name="error_short_response.connect_error">Waiting internet</string>
+  <string name="error_short_response.network_error">Waiting internet</string>
+  <string name="error_short_response.unknown_error">Unknown error occurred</string>
+
+  <!-- state layout string -->
+
+  <string name="state_layout.error.refresh">Tap to repeat</string>
+
+  <!-- sign up -->
+
+  <string name="sign_up.text_input_edit_text.name.hint">Name</string>
+  <string name="sign_up.text_input_edit_text.last_name.hint">Last name</string>
+  <string name="sign_up.text_input_edit_text.city.hint">City</string>
+  <string name="sign_up.text_input_edit_text.phone.hint">Phone</string>
+  <string name="sign_up.text_input_edit_text.email.hint">Email</string>
+  <string name="sign_up.text_input_edit_text.password.hint">Password</string>
+  <string name="sign_up.text_input_edit_text.confirm_password.hint">Confirm password</string>
+  <string name="sign_up.button.sign_in.text">Sign in</string>
+  <string name="sign_up.text_input_edit_text.error.size">Less the minimal length</string>
+  <string name="sign_up.text_input_edit_text.email.error.validation">Email is invalid</string>
+  <string name="sign_up.text_input_edit_text.password.error.validation">Password is invalid</string>
+  <string name="sign_up.text_input_edit_text.password.error.equal">Passwords is not equal</string>
+  <string name="sign_up.error_dialog.title">Sign in is broke</string>
+
+  <!-- login -->
+
+  <string name="login.text_input_edit_text.login.hint">Login (email)</string>
+  <string name="login.text_input_edit_text.password.hint">Password</string>
+  <string name="login.button.login.text">Login</string>
+  <string name="login.button.sign_up.text">Sign Up</string>
+  <string name="login.text_input_edit_text.login.error.size">Less the minimal length</string>
+  <string name="login.text_input_edit_text.password.error.size">Less the minimal length</string>
+  <string name="login.error_dialog.title">Login is broke</string>
+
+  <!-- loading utils -->
+
+  <string name="loading_utils.message">Loading …</string>
+
+  <!-- navigation item -->
+
+  <string name="navigation_item.statistics">Statistics</string>
+  <string name="navigation_item.friends">Friends</string>
+  <string name="navigation_item.communications">Communications</string>
+  <string name="navigation_item.groups">Groups</string>
+  <string name="navigation_item.search">Search</string>
+  <string name="navigation_item.arduino">Devices</string>
+
+  <!-- main activity -->
+
+  <string name="main_activity.open_drawer">open_drawer</string>
+  <string name="main_activity.close_drawer">close_drawer</string>
+
+  <!-- header -->
+
+  <string name="header.online">online</string>
+
+  <!-- file utils -->
+
+  <string name="file_utils.no_photo_file">photo file absent</string>
+
+  <!-- statistics -->
+
+  <string name="statistics.text_view.total_title.text">Total statistics</string>
+  <string name="statistics.text_view.statistics_title.text">Statistics by period</string>
+
+  <!-- details statistics -->
+
+  <string name="details_statistics.text_view.total_week_statistics.text">Total week statistics</string>
+
+  <!-- bluetooth utils -->
+
+  <string name="bluetooth_utils.error.not_work">Bluetooth not work on your device</string>
+  <string name="bluetooth_utils.error.not_turn_on">Bluetooth not turn on </string>
+  <string name="bluetooth_utils.error.not_search_device">No devices found</string>
+
+  <!-- arduino -->
+
+  <string name="arduino.error.empty">No arduino found</string>
+
+
+
+  <!-- statistics array -->
+
+  <string-array name="time_period">
+    <item>Year</item>
+    <item>Month</item>
+    <item>Week</item>
+  </string-array>
+
+  <string-array name="name_week">
+    <item>Sunday</item>
+    <item>Saturday</item>
+    <item>Friday</item>
+    <item>Thursday</item>
+    <item>Wednesday</item>
+    <item>Tuesday</item>
+    <item>Monday</item>
+  </string-array>
+
+  <string-array name="title_total_statistics_profile">
+    <item>Total distance</item>
+    <item>Total speed</item>
+    <item>Total time in travel</item>
+    <item>Total calories</item>
+    <item>Dangerous Situation</item>
+    <item>Attempted Theft</item>
+  </string-array>
+
+  <string-array name="title_total_statistics_week">
+    <item>Longest distance</item>
+    <item>Shortest distance</item>
+    <item>Middle effective distance</item>
+    <item>Count effective day</item>
+  </string-array>
+
+  <string-array name="index_total_statistics_profile">
+    <item>km</item>
+    <item>m/s</item>
+    <item></item>
+    <item></item>
+    <item>once</item>
+    <item>once</item>
+  </string-array>
+
+  <string-array name="index_total_statistics_week">
+    <item>km</item>
+    <item>km</item>
+    <item>km</item>
+    <item>count</item>
+  </string-array>
+
+  <string-array name="name_graph">
+    <item>Distance by week</item>
+    <item>Speed by week</item>
+    <item>Active time by week</item>
+    <item>Destroy calories</item>
+  </string-array>
+
+  <string-array name="index_graph">
+    <item>km</item>
+    <item>m/s</item>
+    <item>min</item>
+    <item>PM</item>
+  </string-array>
+
+
+</resources>

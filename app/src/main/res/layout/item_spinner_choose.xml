@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/textViewItemSpinnerChoose"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:paddingTop="@dimen/item_spinner_choose.text_view.choose.padding.top"
+  android:paddingBottom="@dimen/item_spinner_choose.text_view.choose.padding.bottom"
+  android:paddingLeft="@dimen/item_spinner_choose.text_view.choose.padding.left"
+  android:paddingRight="@dimen/item_spinner_choose.text_view.choose.padding.right"
+  android:background="@color/item_spinner_choose.text_view.choose.background"
+  android:textColor="@color/item_spinner_choose.text_view.choose.text"
+  android:textSize="@dimen/item_spinner_choose.text_view.choose.size">
+</TextView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+    android:id="@+id/statistics__item_choose_period_progress"
+    app:actionViewClass="android.widget.ProgressBar"
+    app:showAsAction="always"
+    />
+
+  <item
+    android:id="@+id/statistics_item_choose_period"
+    app:actionViewClass="android.widget.Spinner"
+    app:showAsAction="always"
+    />
+
+</menu>
+

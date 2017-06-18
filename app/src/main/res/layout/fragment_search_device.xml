@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  >
+
+  <data>
+    <import type="android.view.View"/>
+    <variable
+      name="search_device"
+      type="com.jorik.gobike.ViewModel.SearchDeviceViewModel"/>
+  </data>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/constraintLayoutSearchDevice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/swipeRefreshLayoutSearchDevice"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility='@{search_device.showResult ? View.VISIBLE : View.GONE}'
+      app:action_swipe='@{search_device::checkState}'
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:state='@{search_device.swipeResult}'>
+
+      <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutSearchDeviceResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.RecyclerView
+          android:id="@+id/recyclerViewSearchDevice"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_margin="@dimen/search_device.recycler_view.search.margin"
+          app:adapter='@{search_device.searchAdapter}'
+          app:divider='@{true}'
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+      </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+      layout="@layout/state_error"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:errorModel='@{search_device.mErrorModel}'
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:pressed='@{false}'
+      app:swipeState='@{search_device.swipeError}'
+      app:visible='@{search_device.showError}'/>
+
+    <include
+      layout="@layout/state_progress"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:visible='@{search_device.showProgress}'/>
+
+
+  </android.support.constraint.ConstraintLayout>
+</layout>

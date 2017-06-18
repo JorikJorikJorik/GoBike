@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+    <import type="android.view.View"/>
+    <import type="com.jorik.gobike.R"/>
+    <variable
+      name="profile"
+      type="com.jorik.gobike.ViewModel.StatisticsViewModel"/>
+  </data>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/constrainLayoutStatistics"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/swipeRefreshLayoutStatistics"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility='@{profile.stateScreen ? View.VISIBLE : View.GONE }'
+      app:action_swipe='@{profile::updateData}'
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:state='@{profile.stateSwipeRefresh}'>
+
+      <ScrollView
+        android:id="@+id/scrollViewStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+          android:id="@+id/constrainLayoutStatisticsBox"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <android.support.v7.widget.CardView
+            android:id="@+id/cardViewTotalInfo"
+            style="@style/WhiteCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/cardViewStatisticsInfo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+              android:id="@+id/constraintLayoutTotal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <TextView
+                android:id="@+id/textViewTotalTitle"
+                style="@style/TitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/statistics.text_view.total_title.margin.bottom"
+                android:text="@string/statistics.text_view.total_title.text"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerViewTotalInfo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+              <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewTotalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:adapter='@{profile.totalAdapter}'
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTotalTitle">
+
+              </android.support.v7.widget.RecyclerView>
+
+            </android.support.constraint.ConstraintLayout>
+
+
+          </android.support.v7.widget.CardView>
+
+          <android.support.v7.widget.CardView
+            android:id="@+id/cardViewStatisticsInfo"
+            style="@style/WhiteCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewTotalInfo">
+
+            <android.support.constraint.ConstraintLayout
+              android:id="@+id/constraintLayoutStatistics"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <TextView
+                android:id="@+id/textViewStatisticsTitle"
+                style="@style/TitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/statistics.text_view.statistics_title.margin.bottom"
+                android:text="@string/statistics.text_view.statistics_title.text"
+                app:layout_constraintBottom_toTopOf="@+id/constrainLayoutImageTitle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+              <android.support.constraint.ConstraintLayout
+                android:id="@+id/constrainLayoutImageTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/statistics.constrain_layout.image_title.margin.top"
+                android:layout_marginBottom="@dimen/statistics.constrain_layout.image_title.margin.bottom"
+                android:layout_marginStart="@dimen/statistics.constrain_layout.image_title.margin.start"
+                android:layout_marginEnd="@dimen/statistics.constrain_layout.image_title.margin.end"
+                android:layout_marginLeft="@dimen/statistics.constrain_layout.image_title.margin.left"
+                android:layout_marginRight="@dimen/statistics.constrain_layout.image_title.margin.right"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerViewStatisticsInfo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewStatisticsTitle">
+
+                <ImageView
+                  android:id="@+id/imageViewEmpty"
+                  android:layout_width="@dimen/statistics.image_view.empty.width"
+                  android:layout_height="@dimen/statistics.image_view.empty.height"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintHorizontal_weight="4"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toLeftOf="@+id/imageViewDistance"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                  android:id="@+id/imageViewDistance"
+                  android:layout_width="@dimen/statistics.image_view.distance.width"
+                  android:layout_height="@dimen/statistics.image_view.distance.height"
+                  android:src="@mipmap/ic_statistics_distance"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintHorizontal_weight="3"
+                  app:layout_constraintLeft_toRightOf="@+id/imageViewEmpty"
+                  app:layout_constraintRight_toLeftOf="@+id/imageViewSpeed"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                  android:id="@+id/imageViewSpeed"
+                  android:layout_width="@dimen/statistics.image_view.speed.width"
+                  android:layout_height="@dimen/statistics.image_view.speed.height"
+                  android:src="@mipmap/ic_statistics_speed"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintHorizontal_weight="3"
+                  app:layout_constraintLeft_toRightOf="@+id/imageViewDistance"
+                  app:layout_constraintRight_toLeftOf="@+id/imageViewTimeInTrip"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                  android:id="@+id/imageViewTimeInTrip"
+                  android:layout_width="@dimen/statistics.image_view.time_in_trip.width"
+                  android:layout_height="@dimen/statistics.image_view.time_in_trip.height"
+                  android:src="@mipmap/ic_statistics_time_in_trip"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintHorizontal_weight="3"
+                  app:layout_constraintLeft_toRightOf="@+id/imageViewSpeed"
+                  app:layout_constraintRight_toLeftOf="@+id/imageViewCalories"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                  android:id="@+id/imageViewCalories"
+                  android:layout_width="@dimen/statistics.image_view.calories.width"
+                  android:layout_height="@dimen/statistics.image_view.calories.height"
+                  android:src="@mipmap/ic_statistics_calories"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintHorizontal_weight="2"
+                  app:layout_constraintLeft_toRightOf="@+id/imageViewTimeInTrip"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+
+              </android.support.constraint.ConstraintLayout>
+
+
+              <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewStatisticsInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:adapter='@{profile.periodAdapter}'
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constrainLayoutImageTitle">
+
+              </android.support.v7.widget.RecyclerView>
+
+            </android.support.constraint.ConstraintLayout>
+
+          </android.support.v7.widget.CardView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+      </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+      layout="@layout/state_progress"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:visible='@{!profile.stateScreen}'/>
+
+  </android.support.constraint.ConstraintLayout>
+
+</layout>

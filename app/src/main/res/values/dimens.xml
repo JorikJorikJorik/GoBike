@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- layout.view.id_name.field -->
+
+  <!-- dialog error -->
+
+  <dimen name="dialog_error.text_view.title.width">0dp</dimen>
+  <dimen name="dialog_error.text_view.title.margin">20dp</dimen>
+  <dimen name="dialog_error.text_view.title.size">18sp</dimen>
+  <dimen name="dialog_error.text_view.message.width">0dp</dimen>
+  <dimen name="dialog_error.text_view.message.size">16sp</dimen>
+  <dimen name="dialog_error.text_view.message.line_spacing">8dp</dimen>
+  <dimen name="dialog_error.text_view.message.margin.end">20dp</dimen>
+  <dimen name="dialog_error.text_view.message.margin.start">20dp</dimen>
+  <dimen name="dialog_error.text_view.message.margin.left">20dp</dimen>
+  <dimen name="dialog_error.text_view.message.margin.right">20dp</dimen>
+  <dimen name="dialog_error.button.ok.view_size">48dp</dimen>
+  <dimen name="dialog_error.button.ok.margin.bottom">8dp</dimen>
+  <dimen name="dialog_error.button.ok.margin.start">20dp</dimen>
+  <dimen name="dialog_error.button.ok.margin.end">20dp</dimen>
+  <dimen name="dialog_error.button.ok.size">16sp</dimen>
+
+  <!-- style blue button -->
+
+  <dimen name="style.blue_button.text.size">16sp</dimen>
+
+  <!-- state error -->
+
+  <dimen name="state_error.swipe_refresh_layout.error.view_size">0dp</dimen>
+  <dimen name="state_error.swipe_refresh_layout.error.margin.start">20dp</dimen>
+  <dimen name="state_error.swipe_refresh_layout.error.margin.end">20dp</dimen>
+  <dimen name="state_error.swipe_refresh_layout.error.margin.left">20dp</dimen>
+  <dimen name="state_error.swipe_refresh_layout.error.margin.right">20dp</dimen>
+  <dimen name="state_error.image_view.error_icon.view_size">96dp</dimen>
+  <dimen name="state_error.image_view.error_icon.margin.bottom">8dp</dimen>
+  <dimen name="state_error.text_view.error_message.margin.bottom">8dp</dimen>
+  <dimen name="state_error.image_view.refresh_icon.view_size">16dp</dimen>
+  <dimen name="state_error.text_view.refresh_message.margin.start">8dp</dimen>
+  <dimen name="state_error.text_view.refresh_message.margin.left">8dp</dimen>
+
+  <!-- sign up -->
+
+  <dimen name="sign_up.constraint_layout.sign_up.margin.top">8dp</dimen>
+  <dimen name="sign_up.constraint_layout.sign_up.margin.left">8dp</dimen>
+  <dimen name="sign_up.constraint_layout.sign_up.margin.right">8dp</dimen>
+  <dimen name="sign_up.text_input_layout.name.width">0dp</dimen>
+  <dimen name="sign_up.text_input_layout.last_name.width">0dp</dimen>
+  <dimen name="sign_up.text_input_layout.city.width">0dp</dimen>
+  <dimen name="sign_up.text_input_layout.phone.width">0dp</dimen>
+  <dimen name="sign_up.text_input_layout.email.width">0dp</dimen>
+  <dimen name="sign_up.text_input_layout.password.width">0dp</dimen>
+  <dimen name="sign_up.text_input_layout.confirm_password.width">0dp</dimen>
+  <dimen name="sign_up.button.sign_in.width">0dp</dimen>
+  <dimen name="sign_up.button.sign_in.height">48dp</dimen>
+  <dimen name="sign_up.button.sign_in.margin.top">8dp</dimen>
+  <dimen name="sign_up.button.sign_in.margin.bottom">16dp</dimen>
+  <dimen name="sign_up.button.sign_in.margin.left">4dp</dimen>
+  <dimen name="sign_up.button.sign_in.margin.right">4dp</dimen>
+  <dimen name="sign_up.text_input_edit_text.name.size">17sp</dimen>
+  <dimen name="sign_up.text_input_edit_text.last_name.size">17sp</dimen>
+  <dimen name="sign_up.text_input_edit_text.city.size">17sp</dimen>
+  <dimen name="sign_up.text_input_edit_text.phone.size">17sp</dimen>
+  <dimen name="sign_up.text_input_edit_text.email.size">17sp</dimen>
+  <dimen name="sign_up.text_input_edit_text.password.size">17sp</dimen>
+  <dimen name="sign_up.text_input_edit_text.confirm_password.size">17sp</dimen>
+
+  <!-- login -->
+
+  <dimen name="login.image_view.main_icon.width">96dp</dimen>
+  <dimen name="login.image_view.main_icon.height">84dp</dimen>
+  <dimen name="login.image_view.main_icon.margin.top">12dp</dimen>
+  <dimen name="login.image_view.main_icon.margin.bottom">12dp</dimen>
+  <dimen name="login.constraint_layout.center_box.width">0dp</dimen>
+  <dimen name="login.constraint_layout.center_box.margin.start">16dp</dimen>
+  <dimen name="login.constraint_layout.center_box.margin.end">16dp</dimen>
+  <dimen name="login.constraint_layout.center_box.margin.left">16dp</dimen>
+  <dimen name="login.constraint_layout.center_box.margin.right">16dp</dimen>
+  <dimen name="login.text_input_layout.login.width">0dp</dimen>
+  <dimen name="login.text_input_layout.login.margin.bottom">12dp</dimen>
+  <dimen name="login.text_input_layout.password.width">0dp</dimen>
+  <dimen name="login.text_input_layout.password.margin.bottom">24dp</dimen>
+  <dimen name="login.text_input_edit_text.login.size">17sp</dimen>
+  <dimen name="login.text_input_edit_text.password.size">17sp</dimen>
+  <dimen name="login.button.login.width">0dp</dimen>
+  <dimen name="login.button.login.height">48dp</dimen>
+  <dimen name="login.button.login.margin.start">4dp</dimen>
+  <dimen name="login.button.login.margin.end">4dp</dimen>
+  <dimen name="login.button.login.margin.left">4dp</dimen>
+  <dimen name="login.button.login.margin.right">4dp</dimen>
+  <dimen name="login.button.sigh_up.margin.bottom">16dp</dimen>
+  <dimen name="login.button.sigh_up.margin.start">20dp</dimen>
+  <dimen name="login.button.sigh_up.margin.end">20dp</dimen>
+  <dimen name="login.button.sigh_up.margin.left">20dp</dimen>
+  <dimen name="login.button.sigh_up.margin.right">20dp</dimen>
+  <dimen name="login.button.sigh_up.width">0dp</dimen>
+  <dimen name="login.button.sigh_up.height">48dp</dimen>
+  <dimen name="login.button.login.margin.bottom">4dp</dimen>
+
+
+  <!-- white button press selector -->
+
+  <dimen name="white_button_press_selector.press.radius">0dp</dimen>
+
+  <!-- white button selector -->
+
+  <dimen name="white_button_selector.focus.radius">0dp</dimen>
+
+  <!-- blue main button selector -->
+
+  <dimen name="blue_main_button_selector.focus.radius">3dp</dimen>
+
+  <!-- blue main button press selector -->
+
+  <dimen name="blue_main_button_press_selector.focus.radius">3dp</dimen>
+
+  <!-- blue light button selector -->
+
+  <dimen name="blue_light_button_selector.focus.radius">3dp</dimen>
+  <dimen name="blue_light_button_selector.enable.radius">3dp</dimen>
+
+  <!-- blue light button press selector -->
+
+  <dimen name="blue_light_button_press_selector.focus.radius">3dp</dimen>
+
+  <!-- header -->
+
+  <dimen name="header.image_view.profile.view_size">72dp</dimen>
+  <dimen name="header.image_view.profile.margin">16dp</dimen>
+  <dimen name="header.text_view.full_name.margin.bottom">0dp</dimen>
+  <dimen name="header.text_view.full_name.margin.left">16dp</dimen>
+  <dimen name="header.text_view.last_active_time.margin.bottom">16dp</dimen>
+  <dimen name="header.text_view.last_active_time.margin.left">16dp</dimen>
+  <dimen name="header.image_view.exit.view_size">40dp</dimen>
+  <dimen name="header.image_view.exit.padding">8dp</dimen>
+  <dimen name="header.image_view.exit.margin.top">8dp</dimen>
+  <dimen name="header.image_view.exit.margin.bottom">8dp</dimen>
+  <dimen name="header.image_view.exit.margin.end">16dp</dimen>
+  <dimen name="header.image_view.exit.margin.left">8dp</dimen>
+  <dimen name="header.image_view.exit.margin.right">16dp</dimen>
+  <dimen name="header.text_view.full_name.margin.size">17sp</dimen>
+  <dimen name="header.constraint_layout.header.padding.top">0dp</dimen>
+
+
+  <!-- style go bike navigation view -->
+
+  <dimen name="style.go_bike_navigation_view.text_size">16sp</dimen>
+  <dimen name="style.go_bike_navigation_view.list_preferred_item_height_small">40dp</dimen>
+
+  <!-- statistics -->
+
+  <dimen name="statistics.text_view.total_title.size">20sp</dimen>
+  <dimen name="statistics.text_view.statistics_title.size">20sp</dimen>
+  <dimen name="statistics.text_view.statistics_title.margin.bottom">12dp</dimen>
+  <dimen name="statistics.text_view.total_title.margin.bottom">12dp</dimen>
+  <dimen name="statistics.constrain_layout.image_title.margin.top">6dp</dimen>
+  <dimen name="statistics.constrain_layout.image_title.margin.bottom">8dp</dimen>
+  <dimen name="statistics.constrain_layout.image_title.margin.start">8dp</dimen>
+  <dimen name="statistics.constrain_layout.image_title.margin.end">8dp</dimen>
+  <dimen name="statistics.constrain_layout.image_title.margin.left">8dp</dimen>
+  <dimen name="statistics.constrain_layout.image_title.margin.right">8dp</dimen>
+  <dimen name="statistics.image_view.empty.height">26dp</dimen>
+  <dimen name="statistics.image_view.distance.height">26dp</dimen>
+  <dimen name="statistics.image_view.speed.height">26dp</dimen>
+  <dimen name="statistics.image_view.time_in_trip.height">26dp</dimen>
+  <dimen name="statistics.image_view.calories.height">26dp</dimen>
+  <dimen name="statistics.image_view.empty.width">0dp</dimen>
+  <dimen name="statistics.image_view.distance.width">0dp</dimen>
+  <dimen name="statistics.image_view.speed.width">0dp</dimen>
+  <dimen name="statistics.image_view.time_in_trip.width">0dp</dimen>
+  <dimen name="statistics.image_view.calories.width">0dp</dimen>
+
+  <!-- item total statistics -->
+
+  <dimen name="item_total_statistics.constraint_layout.total_statistics.margin.top">6dp</dimen>
+  <dimen name="item_total_statistics.constraint_layout.total_statistics.margin.bottom">8dp</dimen>
+  <dimen name="item_total_statistics.constraint_layout.total_statistics.margin.left">8dp</dimen>
+  <dimen name="item_total_statistics.constraint_layout.total_statistics.margin.right">8dp</dimen>
+  <dimen name="item_total_statistics.text_view.value.size">19sp</dimen>
+  <dimen name="item_total_statistics.text_view.index.size">14sp</dimen>
+  <dimen name="item_total_statistics.text_view.index.margin.left">8dp</dimen>
+  <dimen name="item_total_statistics.image_view.icon.view_size">18dp</dimen>
+  <dimen name="item_total_statistics.text_view.title.size">15sp</dimen>
+  <dimen name="item_total_statistics.text_view.title.margin.left">8dp</dimen>
+
+  <!-- item period statistics -->
+
+  <dimen name="item_period_statistics.text_view.name_date.width">0dp</dimen>
+  <dimen name="item_period_statistics.text_view.distance.width">0dp</dimen>
+  <dimen name="item_period_statistics.text_view.speed.width">0dp</dimen>
+  <dimen name="item_period_statistics.text_view.interval.width">0dp</dimen>
+  <dimen name="item_period_statistics.text_view.calories.width">0dp</dimen>
+  <dimen name="item_period_statistics.constraint_layout.period_statistics.padding">8dp</dimen>
+
+  <!-- item spinner choose -->
+
+  <dimen name="item_spinner_choose.text_view.choose.padding.top">2dp</dimen>
+  <dimen name="item_spinner_choose.text_view.choose.padding.bottom">2dp</dimen>
+  <dimen name="item_spinner_choose.text_view.choose.padding.left">5dp</dimen>
+  <dimen name="item_spinner_choose.text_view.choose.padding.right">5dp</dimen>
+  <dimen name="item_spinner_choose.text_view.choose.size">16sp</dimen>
+
+  <!-- item spinner drop down -->
+
+  <dimen name="item_spinner_drop_down.check_text_view.drop_down.margin">5dp</dimen>
+  <dimen name="item_spinner_drop_down.check_text_view.drop_down.padding">8dp</dimen>
+  <dimen name="item_spinner_drop_down.check_text_view.drop_down.height">50dp</dimen>
+  <dimen name="item_spinner_drop_down.check_text_view.drop_down.size">16sp</dimen>
+
+  <!-- style white card view -->
+
+  <dimen name="style.white_card_view.card_elevation">4dp</dimen>
+  <dimen name="style.white_card_view.card_corner_radius">3dp</dimen>
+  <dimen name="style.white_card_view.content_padding">8dp</dimen>
+  <dimen name="style.white_card_view.margin_left">5dp</dimen>
+  <dimen name="style.white_card_view.margin_right">5dp</dimen>
+
+  <!-- style title text view -->
+
+  <dimen name="style.title_text_view.size">20sp</dimen>
+
+  <!-- style blue tab layout -->
+
+  <dimen name="style.blue_tab_layout.tab_indicator_height">5dp</dimen>
+
+  <!-- item week graph -->
+
+  <dimen name="item_week_graph.card_view.graph.width">0dp</dimen>
+  <dimen name="item_week_graph.horizontal_bar_chart.item_week.width">0dp</dimen>
+  <dimen name="item_week_graph.horizontal_bar_chart.item_week.height">200dp</dimen>
+  <dimen name="item_week_graph.text_view.graph.margin.bottom">12dp</dimen>
+
+  <!-- details statistics -->
+
+  <dimen name="details_statistics.card_view.total_week_statistics.width">0dp</dimen>
+  <dimen name="details_statistics.tex_view.total_week_statistics.margin.bottom">12dp</dimen>
+  <dimen name="details_statistics.recycler_view.week_statistics.width">0dp</dimen>
+  <dimen name="details_statistics.recycler_view.total_week_statistics.width">0dp</dimen>
+
+  <!-- arduino -->
+
+  <dimen name="arduino.recycler_view.arduino.margin">8dp</dimen>
+  <dimen name="arduino.floating_action_button.search_device.margin">16dp</dimen>
+
+  <!-- item arduino -->
+
+  <dimen name="item_arduino.constraint_layout.item.margin.top">12dp</dimen>
+  <dimen name="item_arduino.constraint_layout.item.margin.left">12dp</dimen>
+  <dimen name="item_arduino.constraint_layout.item.margin.bottom">12dp</dimen>
+  <dimen name="item_arduino.constraint_layout.item.margin.right">4dp</dimen>
+  <dimen name="item_arduino.text_view.name.margin.bottom">8dp</dimen>
+  <dimen name="item_arduino.text_view.name.margin.right">8dp</dimen>
+  <dimen name="item_arduino.text_view.name.size">17sp</dimen>
+  <dimen name="item_arduino.text_view.mac.margin.right">8dp</dimen>
+  <dimen name="item_arduino.text_view.mac.size">16sp</dimen>
+  <dimen name="item_arduino.image_view.delete.view_size">48dp</dimen>
+  <dimen name="item_arduino.image_view.delete.padding">12dp</dimen>
+  <dimen name="item_search_device.constraint_layout.search_device.margin">8dp</dimen>
+  <dimen name="item_search_device.text_view.name.size">17sp</dimen>
+  <dimen name="item_search_device.text_view.mac.size">16sp</dimen>
+  <dimen name="item_search_device.text_view.name.margin.bottom">8dp</dimen>
+  <dimen name="search_device.recycler_view.search.margin">8dp</dimen>
+
+  <!-- -->
+
+</resources>

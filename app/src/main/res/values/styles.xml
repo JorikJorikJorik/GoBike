@@ -1,0 +1,99 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primary.dark</item>
+    <item name="colorAccent">@color/accent</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primary.dark</item>
+    <item name="colorAccent">@color/accent</item>
+  </style>
+
+  <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primary.dark</item>
+    <item name="colorAccent">@color/accent</item>
+    <item name="android:windowBackground">@drawable/splash_screen</item>
+  </style>
+
+  <style name="WhiteTextInputLayout" parent="Widget.Design.TextInputLayout">
+    <item name="colorControlNormal">@color/style.white_text_input_layout.control.normal</item>
+    <item name="colorControlActivated">@color/style.white_text_input_layout.control.activated</item>
+    <item name="colorControlHighlight">@color/style.white_text_input_layout.control.highlight</item>
+    <item name="android:textColorHint">@color/style.white_text_input_layout.hint</item>
+    <item name="android:textColor">@color/style.white_text_input_layout.text</item>
+  </style>
+
+  <style name="BlueTextInputLayout" parent="Widget.Design.TextInputLayout">
+    <item name="colorControlNormal">@color/style.blue_text_input_layout.control.normal</item>
+    <item name="colorControlActivated">@color/style.blue_text_input_layout.control.activated</item>
+    <item name="colorControlHighlight">@color/style.blue_text_input_layout.control.highlight</item>
+    <item name="android:textColorHint">@color/style.blue_text_input_layout.hint</item>
+    <item name="android:textColor">@color/style.blue_text_input_layout.text</item>
+  </style>
+
+  <style name="PasswordEditText" parent="Widget.AppCompat.EditText">
+    <item name="android:textColor">@color/style.password.text</item>
+    <item name="android:inputType">textPassword</item>
+    <item name="android:fontFamily">sans-serif</item>
+  </style>
+
+  <style name="BlueButton" parent="Widget.AppCompat.Button">
+    <item name="android:textSize">@dimen/style.blue_button.text.size</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/style.blue_button.text</item>
+  </style>
+
+  <style name="BlueProgressBar" parent="Widget.AppCompat.ProgressBar">
+    <item name="colorAccent">@color/style.blue_progress_bar.accent</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+  </style>
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+    <item name="android:background">@color/style.popup_overlay.background</item>
+    <item name="android:textColorPrimary">@color/style.popup_overlay.text_color_primary</item>
+    <item name="android:textColorSecondary">@color/style.popup_overlay.text_color_secondary</item>
+    <item name="android:actionMenuTextColor">@color/style.popup_overlay.action_menu_text_color</item>
+  </style>
+
+  <style name="GoBikeNavigationView">
+    <item name="android:textSize">@dimen/style.go_bike_navigation_view.text_size</item>
+    <item name="android:listPreferredItemHeightSmall">@dimen/style.go_bike_navigation_view.list_preferred_item_height_small</item>
+  </style>
+
+  <style name="WhiteCardView" parent="CardView">
+    <item name="cardElevation">@dimen/style.white_card_view.card_elevation</item>
+    <item name="cardCornerRadius">@dimen/style.white_card_view.card_corner_radius</item>
+    <item name="cardPreventCornerOverlap">true</item>
+    <item name="cardUseCompatPadding">true</item>
+    <item name="contentPadding">@dimen/style.white_card_view.content_padding</item>
+    <item name="android:layout_marginLeft">@dimen/style.white_card_view.margin_left</item>
+    <item name="android:layout_marginRight">@dimen/style.white_card_view.margin_right</item>
+    <item name="cardBackgroundColor">@color/style.white_card_view.card_background_color</item>
+  </style>
+
+  <style name="TitleTextView">
+    <item name="android:textSize">@dimen/style.title_text_view.size</item>
+    <item name="android:textColor">@color/style.title_text_view.text_color</item>
+  </style>
+
+  <style name="BlueTabLayout" parent="Widget.Design.TabLayout">
+    <item name="tabGravity">center</item>
+    <item name="tabIndicatorColor">@color/style.blue_tab_layout.tab_indicator_color</item>
+    <item name="tabIndicatorHeight">@dimen/style.blue_tab_layout.tab_indicator_height</item>
+    <item name="tabMode">scrollable</item>
+    <item name="tabTextColor">@color/style.blue_tab_layout.tab_text_color</item>
+    <item name="tabSelectedTextColor">@color/style.blue_tab_layout.tab_selected_text_color</item>
+  </style>
+
+</resources>

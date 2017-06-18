@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer-array name="icon_total_statistics_profile">
+    <item>@mipmap/ic_statistics_distance</item>
+    <item>@mipmap/ic_statistics_speed</item>
+    <item>@mipmap/ic_statistics_time_in_trip</item>
+    <item>@mipmap/ic_statistics_calories</item>
+    <item>@mipmap/ic_statistics_count_dangerous_situation</item>
+    <item>@mipmap/ic_statistics_count_theft</item>
+  </integer-array>
+
+    <integer-array name="icon_total_statistics_week">
+      <item>@mipmap/ic_statistics_longest</item>
+      <item>@mipmap/ic_statistics_shortest</item>
+      <item>@mipmap/ic_statistics_middle_distance</item>
+      <item>@mipmap/ic_statistics_count_effective_day</item>
+
+    </integer-array>
+
+</resources>

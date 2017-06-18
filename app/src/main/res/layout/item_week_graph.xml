@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+    <variable
+      name="week_data"
+      type="com.jorik.gobike.Model.POJO.GraphModel"/>
+  </data>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/constrainLayoutItemWeekGraph"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+      android:id="@+id/cardViewItemWeekGraph"
+      style="@style/WhiteCardView"
+      android:layout_width="@dimen/item_week_graph.card_view.graph.width"
+      android:layout_height="wrap_content"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+      <android.support.constraint.ConstraintLayout
+        android:id="@+id/constrainLayoutGraph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+          android:id="@+id/textViewTitleItemGraph"
+          style="@style/TitleTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/item_week_graph.text_view.graph.margin.bottom"
+          android:text='@{week_data.nameGraph}'
+          app:layout_constraintBottom_toTopOf="@+id/horizontalBarChartItemWeek"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+          android:id="@+id/horizontalBarChartItemWeek"
+          android:layout_width="@dimen/item_week_graph.horizontal_bar_chart.item_week.width"
+          android:layout_height="@dimen/item_week_graph.horizontal_bar_chart.item_week.height"
+          app:input_data='@{week_data.values}'
+          app:index='@{week_data.index}'
+          app:animated_time='@{2000}'
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textViewTitleItemGraph"
+          app:name_column='@{week_data.nameColumn}'/>
+
+      </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+  </android.support.constraint.ConstraintLayout>
+</layout>

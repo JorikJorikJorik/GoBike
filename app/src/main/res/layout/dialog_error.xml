@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/constraintLayoutErrorDialog"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <TextView
+    android:id="@+id/textViewTitle"
+    android:textStyle="bold"
+    android:layout_width="@dimen/dialog_error.text_view.title.width"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dialog_error.text_view.title.margin"
+    android:textColor="@color/dialog_error.text_view.title.text"
+    android:textSize="@dimen/dialog_error.text_view.title.size"
+    app:layout_constraintBottom_toTopOf="@+id/textViewMessage"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/textViewMessage"
+    android:layout_width="@dimen/dialog_error.text_view.message.width"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dialog_error.text_view.message.margin.start"
+    android:layout_marginEnd="@dimen/dialog_error.text_view.message.margin.end"
+    android:layout_marginLeft="@dimen/dialog_error.text_view.message.margin.left"
+    android:layout_marginRight="@dimen/dialog_error.text_view.message.margin.right"
+    android:lineSpacingExtra="@dimen/dialog_error.text_view.message.line_spacing"
+    android:textSize="@dimen/dialog_error.text_view.message.size"
+    app:layout_constraintBottom_toTopOf="@+id/buttonOk"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textViewTitle"/>
+
+  <Button
+    android:id="@+id/buttonOk"
+    android:layout_width="@dimen/dialog_error.button.ok.view_size"
+    android:layout_height="@dimen/dialog_error.button.ok.view_size"
+    android:layout_marginBottom="@dimen/dialog_error.button.ok.margin.bottom"
+    android:layout_marginStart="@dimen/dialog_error.button.ok.margin.start"
+    android:layout_marginEnd="@dimen/dialog_error.button.ok.margin.end"
+    android:background="@android:color/transparent"
+    android:text="@android:string/ok"
+    android:textColor="@color/dialog_error.button.ok.text"
+    android:textSize="@dimen/dialog_error.button.ok.size"
+    app:layout_constraintBottom_toTopOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textViewMessage"/>
+
+</android.support.constraint.ConstraintLayout>

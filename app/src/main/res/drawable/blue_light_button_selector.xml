@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_focused="false">
+    <shape android:shape="rectangle">
+      <corners android:radius="@dimen/blue_light_button_selector.focus.radius"/>
+      <solid android:color="@color/blue_light_button_selector.focus"/>
+    </shape>
+  </item>
+  <item android:state_enabled="false">
+    <shape android:shape="rectangle">
+      <corners android:radius="@dimen/blue_light_button_selector.enable.radius"/>
+      <solid android:color="@color/blue_light_button_selector.enable"/>
+    </shape>
+  </item>
+</selector>

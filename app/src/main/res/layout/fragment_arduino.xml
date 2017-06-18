@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+    <import type="android.view.View"/>
+    <variable
+      name="arduino"
+      type="com.jorik.gobike.ViewModel.ArduinoViewModel"/>
+  </data>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/constrainLayoutArduino"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/swipeRefreshLayoutArduino"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility='@{arduino.stateResult ? View.VISIBLE : View.GONE}'
+      app:action_swipe='@{arduino::loadArduinoList}'
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:state='@{arduino.swipeResult}'>
+
+      <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayoutArduino"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+          android:id="@+id/recyclerViewArduino"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_margin="@dimen/arduino.recycler_view.arduino.margin"
+          app:adapter='@{arduino.arduinoAdapter}'
+          app:divider='@{true}'/>
+
+      </android.support.design.widget.CoordinatorLayout>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+      layout="@layout/state_error"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:errorModel='@{arduino.mErrorModel}'
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:swipeState='@{arduino.swipeError}'
+      app:visible='@{arduino.stateError}'/>
+
+    <include
+      layout="@layout/state_progress"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:visible='@{arduino.stateProgress}'/>
+
+    <android.support.design.widget.FloatingActionButton
+      android:id="@+id/floatingActionButtonSearchDevice"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/arduino.floating_action_button.search_device.margin"
+      android:src="@mipmap/ic_bluetooth_searching"
+      app:backgroundTint="@color/arduino.floating_action_button.search_device.backgrount_tint"
+      app:fabSize="normal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:onClick='@{arduino.moveToSearch}'
+      app:rippleColor="@color/arduino.floating_action_button.search_device.ripple_color"
+      app:visibility_fab='@{arduino.stateFab}'/>
+
+  </android.support.constraint.ConstraintLayout>
+
+</layout>

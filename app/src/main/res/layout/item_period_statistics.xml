@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+    <import type="com.jorik.gobike.Utils.DateUtils"/>
+    <import type="com.jorik.gobike.Utils.ConverterUtils"/>
+    <variable
+      name="period_adapter"
+      type="com.jorik.gobike.View.Adapter.PeriodStatisticsAdapter"/>
+    <variable
+      name="period"
+      type="com.jorik.gobike.Network.DTO.EveryDayProfileStatisticsDTO"/>
+  </data>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/constrainLayoutPeriodStatistics"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/item_period_statistics.constraint_layout.period_statistics.padding">
+
+    <TextView
+      android:id="@+id/textViewNameDate"
+      android:textStyle="bold"
+      android:layout_width="@dimen/item_period_statistics.text_view.name_date.width"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:text='@{period.nameDate}'
+      android:textColor="@color/item_period_statistics.text_view.name_date"
+      app:layout_constraintHorizontal_weight="4"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@+id/textViewDistance"/>
+
+    <TextView
+      android:id="@+id/textViewDistance"
+      android:layout_width="@dimen/item_period_statistics.text_view.distance.width"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:text='@{String.format("%s %s", Double.toString(ConverterUtils.decimal(period.countDistance)), "km")}'
+      app:layout_constraintHorizontal_weight="3"
+      app:layout_constraintLeft_toRightOf="@+id/textViewNameDate"
+      app:layout_constraintRight_toLeftOf="@+id/textViewSpeed"/>
+
+    <TextView
+      android:id="@+id/textViewSpeed"
+      android:layout_width="@dimen/item_period_statistics.text_view.speed.width"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:text='@{String.format("%s %s", Double.toString(ConverterUtils.decimal(period.middleSpeed)), "m/s")}'
+      app:layout_constraintHorizontal_weight="3"
+      app:layout_constraintLeft_toRightOf="@+id/textViewDistance"
+      app:layout_constraintRight_toLeftOf="@+id/textViewInterval"/>
+
+    <TextView
+      android:id="@+id/textViewInterval"
+      android:layout_width="@dimen/item_period_statistics.text_view.interval.width"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text='@{DateUtils.parseInterval(period.timeInTrip)}'
+      app:layout_constraintHorizontal_weight="3"
+      app:layout_constraintLeft_toRightOf="@+id/textViewSpeed"
+      app:layout_constraintRight_toLeftOf="@+id/textViewCalories"/>
+
+    <TextView
+      android:id="@+id/textViewCalories"
+      android:layout_width="@dimen/item_period_statistics.text_view.calories.width"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:text='@{String.format("%s %s", Integer.toString(period.calories), period.calories > 0 ? "" : "PM")}'
+      app:layout_constraintHorizontal_weight="2"
+      app:layout_constraintLeft_toRightOf="@+id/textViewInterval"
+      app:layout_constraintRight_toRightOf="parent"/>
+
+  </android.support.constraint.ConstraintLayout>
+</layout>

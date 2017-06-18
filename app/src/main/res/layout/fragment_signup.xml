@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+  <data>
+    <variable
+      name="signup"
+      type="com.jorik.gobike.ViewModel.SignUpViewModel"/>
+  </data>
+
+  <ScrollView
+    android:id="@+id/scrollViewSignUp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/sign_up.constraint_layout.sign_up.margin.top"
+    android:layout_marginLeft="@dimen/sign_up.constraint_layout.sign_up.margin.left"
+    android:layout_marginRight="@dimen/sign_up.constraint_layout.sign_up.margin.right"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+      android:id="@+id/constraintLayoutSignUp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutName"
+        android:layout_width="@dimen/sign_up.text_input_layout.name.width"
+        android:layout_height="wrap_content"
+        android:theme="@style/BlueTextInputLayout"
+        app:error='@{signup.nameError}'
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutLastName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+          android:id="@+id/textInputEditTextName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/sign_up.text_input_edit_text.name.hint"
+          android:text='@={signup.name}'
+          android:textSize="@dimen/sign_up.text_input_edit_text.name.size"
+          app:listener='@{signup::enableSignIn}'/>
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutLastName"
+        android:layout_width="@dimen/sign_up.text_input_layout.last_name.width"
+        android:layout_height="wrap_content"
+        android:theme="@style/BlueTextInputLayout"
+        app:error='@{signup.lastNameError}'
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutCity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutName">
+
+        <android.support.design.widget.TextInputEditText
+          android:id="@+id/textInputEditTextLastName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/sign_up.text_input_edit_text.last_name.hint"
+          android:text='@={signup.lastName}'
+          android:textSize="@dimen/sign_up.text_input_edit_text.last_name.size"
+          app:listener='@{signup::enableSignIn}'
+          />
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutCity"
+        android:layout_width="@dimen/sign_up.text_input_layout.city.width"
+        android:layout_height="wrap_content"
+        android:theme="@style/BlueTextInputLayout"
+        app:error='@{signup.cityError}'
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutPhone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLastName">
+
+        <android.support.design.widget.TextInputEditText
+          android:id="@+id/textInputEditTextCity"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/sign_up.text_input_edit_text.city.hint"
+          android:text='@={signup.city}'
+          android:textSize="@dimen/sign_up.text_input_edit_text.city.size"
+          app:listener='@{signup::enableSignIn}'
+          />
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutPhone"
+        android:layout_width="@dimen/sign_up.text_input_layout.phone.width"
+        android:layout_height="wrap_content"
+        android:theme="@style/BlueTextInputLayout"
+        app:error='@{signup.phoneError}'
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutEmail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCity">
+
+        <android.support.design.widget.TextInputEditText
+          android:id="@+id/textInputEditTextPhone"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/sign_up.text_input_edit_text.phone.hint"
+          android:inputType="phone"
+          android:text='@={signup.phone}'
+          android:textSize="@dimen/sign_up.text_input_edit_text.phone.size"
+          app:listener='@{signup::enableSignIn}'
+          />
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutEmail"
+        android:layout_width="@dimen/sign_up.text_input_layout.email.width"
+        android:layout_height="wrap_content"
+        android:theme="@style/BlueTextInputLayout"
+        app:error='@{signup.emailError}'
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPhone">
+
+        <android.support.design.widget.TextInputEditText
+          android:id="@+id/textInputEditTextEmail"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/sign_up.text_input_edit_text.email.hint"
+          android:inputType="textEmailAddress"
+          android:text='@={signup.email}'
+          android:textSize="@dimen/sign_up.text_input_edit_text.email.size"
+          app:listener='@{signup::enableSignIn}'
+          />
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutPassword"
+        android:layout_width="@dimen/sign_up.text_input_layout.password.width"
+        android:layout_height="wrap_content"
+        android:theme="@style/BlueTextInputLayout"
+        app:error='@{signup.passwordError}'
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutConfirmPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/sign_up.text_input_layout.password.toggle_tint">
+
+        <android.support.design.widget.TextInputEditText
+          android:id="@+id/textInputEditTextPassword"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/sign_up.text_input_edit_text.password.hint"
+          android:text='@={signup.password}'
+          android:textSize="@dimen/sign_up.text_input_edit_text.password.size"
+          android:theme="@style/PasswordEditText"
+          app:listener='@{signup::enableSignIn}'
+          />
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutConfirmPassword"
+        android:layout_width="@dimen/sign_up.text_input_layout.confirm_password.width"
+        android:layout_height="wrap_content"
+        android:theme="@style/BlueTextInputLayout"
+        app:error='@{signup.confirmPasswordError}'
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignIn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/sign_up.text_input_layout.confirm_password.toggle_tint">
+
+        <android.support.design.widget.TextInputEditText
+          android:id="@+id/textInputEditTextConfirmPassword"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/sign_up.text_input_edit_text.confirm_password.hint"
+          android:text='@={signup.confirmPassword}'
+          android:textSize="@dimen/sign_up.text_input_edit_text.confirm_password.size"
+          android:theme="@style/PasswordEditText"
+          app:listener='@{signup::enableSignIn}'
+          />
+
+      </android.support.design.widget.TextInputLayout>
+
+      <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="@dimen/sign_up.button.sign_in.width"
+        android:layout_height="@dimen/sign_up.button.sign_in.height"
+        android:layout_marginTop="@dimen/sign_up.button.sign_in.margin.top"
+        android:layout_marginBottom="@dimen/sign_up.button.sign_in.margin.bottom"
+        android:layout_marginLeft="@dimen/sign_up.button.sign_in.margin.left"
+        android:layout_marginRight="@dimen/sign_up.button.sign_in.margin.right"
+        android:stateListAnimator="@null"
+        android:background="@drawable/blue_main_button_press_selector"
+        android:enabled='@{signup.enableSignIn}'
+        android:text="@string/sign_up.button.sign_in.text"
+        app:onClick='@{signup::signIn}'
+        android:theme="@style/BlueButton"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutConfirmPassword"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+  </ScrollView>
+
+</layout>
